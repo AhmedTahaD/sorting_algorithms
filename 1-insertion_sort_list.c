@@ -32,13 +32,13 @@ void insertion_sort_list(listint_t **list)
 	if (!list || !*list || !(*list)->next)
 		return;
 	i = (*list)->next;
-	while(i)
+	while (i)
 	{
 		j = i;
 		i = i->next;
-		while(j && j->prev)
+		while (j && j->prev)
 		{
-			if(j->prev->n > j->n)
+			if (j->prev->n > j->n)
 			{
 				swap_node(j->prev, j);
 				if (!j->prev)
