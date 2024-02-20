@@ -26,9 +26,9 @@ void swap(int *array, size_t size, int *a, int *b)
  *
  * Return: size_t
  */
-size_t partition(int *array, size_t size, size_t low, size_t high)
+size_t partition(int *array, size_t size, ssize_t low, ssize_t high)
 {
-	long unsigned int i, j;
+	int i, j;
 	int pivot = array[high];
 
 	for (i = j = low; j < high; j++)
@@ -49,7 +49,7 @@ size_t partition(int *array, size_t size, size_t low, size_t high)
  *@low: the low index of the sort range
  *@high: the high index of the sorting range
 */
-void quick_sorting(int *array, size_t size, size_t low, size_t high)
+void quick_sorting(int *array, size_t size, ssize_t low, ssize_t high)
 {
 	if (low < high)
 	{
