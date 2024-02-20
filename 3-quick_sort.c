@@ -54,6 +54,7 @@ void quick_sorting(int *array, size_t size, size_t low, size_t high)
 	if (low < high)
 	{
 		size_t pivot = partition(array, size, low, high);
+
 		quick_sorting(array, size, low, pivot - 1);
 		quick_sorting(array, size, pivot + 1, high);
 	}
