@@ -28,7 +28,7 @@ void swap(int *array, size_t size, int *a, int *b)
  */
 size_t partition(int *array, size_t size, size_t low, size_t high)
 {
-	int i, j;
+	long unsigned int i, j;
 	int pivot = array[high];
 
 	for (i = j = low; j < high; j++)
@@ -60,7 +60,7 @@ void quick_sorting(int *array, size_t size, size_t low, size_t high)
 	}
 }
 /**
- * quick_sort - calls quicksort
+ * quick_sort - calls quick_sorting
  * @array: array to be sorted
  * @size: array size
  */
