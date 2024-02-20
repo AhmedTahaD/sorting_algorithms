@@ -42,25 +42,25 @@ size_t partition(int *array, size_t size, ssize_t low, ssize_t high)
 	return (i);
 }
 /**
- * quick_sorting - function sorts an array of integers
+ * quicksorting - function sorts an array of integers
  * in ascending order using the Quick sort algorithm
  * @array: array to be sorted
  * @size: size of array
  *@low: the low index of the sort range
  *@high: the high index of the sorting range
-*/
-void quick_sorting(int *array, size_t size, ssize_t low, ssize_t high)
+ */
+void quicksorting(int *array, size_t size, ssize_t low, ssize_t high)
 {
 	if (low < high)
 	{
 		size_t pivot = partition(array, size, low, high);
 
-		quick_sorting(array, size, low, pivot - 1);
-		quick_sorting(array, size, pivot + 1, high);
+		quicksorting(array, size, low, pivot - 1);
+		quicksorting(array, size, pivot + 1, high);
 	}
 }
 /**
- * quick_sort - calls quick_sorting
+ * quick_sort - calls quicksorting
  * @array: array to be sorted
  * @size: array size
  */
@@ -68,5 +68,5 @@ void quick_sort(int *array, size_t size)
 {
 	if (!array || !size)
 		return;
-	quick_sorting(array, size, 0, size - 1);
+	quicksorting(array, size, 0, size - 1);
 }
